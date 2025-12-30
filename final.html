@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<!--預設語言為正體中文-->
+<html lang="zh-hant">
+
+  <head>
+    <!--標題-->
+    <title>遊戲介紹</title>
+    <meta charset="utf-8">
+
+    <!--CSS-->
+    <style>
+      /*自訂字體*/
+      @font-face 
+      {
+        font-family: 'GenSenRounded2TW'; 
+        src: url('fonts/GenSenRounded2TW-R.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body
+      {
+        font-family: 'GenSenRounded2TW', serif;
+      }
+
+      /*頁首*/
+      #a1_top
+      {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      #a1_top h1 
+      {
+        padding-left: 24px;
+      }
+
+      #a1_top h3
+      {
+        margin-left: auto;
+        padding-right: 24px;
+        color: #04a9f3;
+      }
+
+      /*選單*/
+      #a2 
+      {
+        height: 64px;
+        background-color: rgb(255, 255, 255 ,0.75);
+        color: #006290;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0px 128px;
+        border-radius: 64px;
+      }
+
+      .a2-1 
+      {
+        line-height: 48px;
+        border-radius: 64px;
+      }
+
+      .a2-1:hover 
+      {
+        background-color: #ccf2ff;
+      }
+
+      .a2-1 ul /*nav*/
+      {
+        display: none;
+        position: absolute; /*絕對定位*/
+        z-index: 1;         /*設定層級，避免被其他元素蓋住*/
+        background-color: rgb(106, 106, 106);
+        min-width: 128px;
+        list-style-type: none;  /*移除項目符號*/
+      }
+
+      .a2-1:hover ul 
+      {
+        display: block;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .a2-1:hover ul li:hover 
+      {
+        background-color: white;
+      }
+
+      .a2-1 li a 
+      {
+        color: white;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        padding: 0px 16px;
+      }
+
+      .a2-1:hover ul li:hover a 
+      {
+        color: black;
+      }
+
+      /*圖片+文字*/
+      #a3_all
+      {
+        display: flex;
+        width: 100%;
+      }
+
+      /*圖片*/
+      #a3_images
+      {
+        width: 50%;
+        height: 10%;
+        padding: 92px 92px; 
+      }
+
+      #a3_image
+      {
+        border-radius: 16px;
+        border: 4px solid #04a7f355;
+      }
+
+      #a3_buttom
+      {
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .btn {
+        width: 80px;
+        height: 40px;
+      }
+
+      .btn:hover
+      {
+        background-color: #ccf2ff;
+      }
+
+      .btn:active
+      {
+        background-color: #04a9f3;
+      }
+
+      /*文字*/
+      #a3_text
+      {
+        color: #006290;
+        width: 50%;
+        padding: 64px 92px;
+      }
+
+      #a3_linespace
+      {
+        line-height: 24px;
+      }
+
+      /*頁尾*/
+      #end 
+      {
+        height: 48px;
+        line-height: 48px;
+        background-color: #04a7f3ac;
+      }
+
+      #end h5 {
+        color: white;
+        text-align: center;
+        margin: 0px;
+      }
+
+    </style>
+    
+    <!--JavaScript-->
+    <!--外部引用（網頁背景效果）-->
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+    <!--本機引用-->
+    <script src="javascript_images.js"></script>
+
+  </head>
+  <body>
+    <script>
+      bubbly({
+        /*背景漸層顏色設定*/
+        colorStart: "#ccf2ff", 
+        colorStop: "#FFFFFF",
+      });
+    </script>
+
+    <!--頁首-->
+    <div id="a1_top">
+      <!--放圖片-->
+      <h1><img src="images/Rizlinelogo.png" alt="遊戲 Logo" width="200" class="flex"></h1>
+      <h3>讓音樂成為連接世界的線吧！</h3>
+    </div>
+
+    <!--選單-->
+    <div id="a2">
+      <div class="a2-1">首頁與遊戲介紹</div>
+      <!--下拉式選單-->
+      <div class="a2-1">遊戲下載
+        <ul>
+          <li><a href="https://play.google.com/store/apps/details?id=com.PigeonGames.Rizline&pcampaignid=web_share">Google Play</a></li>
+          <li><a href="https://apps.apple.com/tw/app/rizline-%E5%9C%8B%E9%9A%9B%E7%89%88/id1558094248">Apple Store</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="a3_all">
+      <div id="a3_images">
+        <!--圖片介紹（來自 Google Play 商店）-->
+        <img id="a3_image" src="images/rizline_googleplay_1.png" width="220">
+        <img id="a3_image" src="images/rizline_googleplay_2.png" width="220">
+        <img id="a3_image" src="images/rizline_googleplay_3.png" width="220">
+        <img id="a3_image" src="images/rizline_googleplay_4.png" width="220">
+        <img id="a3_image" src="images/rizline_googleplay_5.png" width="220">
+        <div id="a3_buttom">
+          <button class="btn btn-prev">
+            <img src="images/arrow_back.png">
+          </button>
+          <button class="btn btn-next">
+            <img src="images/arrow_forward.png">
+          </button>
+        </div>
+      </div>
+
+      <div id="a3_text">
+        <h1>遊戲特色：</h1>
+        <h2>- 更自由，更無拘</h2>
+        <p id="a3_linespace">全螢幕軌跡判定，感受節奏在指尖碰撞！
+            譜面靈活多變！讓所有人都能感受音樂帶來的樂趣！</p>
+        <h2>- 更從容，更沉浸</h2>
+        <p id="a3_linespace">獨特的 Riztime 設計，情緒與譜面隨節奏律動，HP 與分數隨音樂攀升！
+            完整的音遊曲目體驗，更能傳達心緒！</p>
+        <h2>- 更緊密，更連接</h2>
+        <p id="a3_linespace">網路明明讓世界更近，卻讓許多人漸行漸遠。
+            我們想要透過 Rizline，將真正的「人」連接起來！</p>
+        <h5>來源：Google Play 商店介紹</h5>
+      </div>
+    </div>
+
+    <!--頁尾-->
+    <div id="end">
+      <h5>Pigeon Games</h5>
+    </div>
+  </body>
+</html>
